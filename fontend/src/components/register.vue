@@ -1,6 +1,6 @@
 <template>
-  <div>
-    注册
+  <div class="container reg-container">
+    <h4 class="reg-title text-center">注册</h4>
     <div class="field">
       <p class="control has-icons-left has-icons-right">
         <input class="input" type="email" placeholder="邮箱">
@@ -30,9 +30,7 @@
     </div>
     <div class="field">
       <p class="control">
-        <button class="button is-success" @click="register">
-          Login
-        </button>
+        <button class="button is-success register-btn" @click="register">注册</button>
       </p>
     </div>
   </div>
@@ -40,11 +38,35 @@
 
 <script>
 export default {
-  name: 'Register'
+  name: 'Register',
+  data: function () {
+    return {
+      a: 'a'
+    }
+  },
+  method: {
+    register: function (ev) {
+      console.log('rem')
+      return {
+        a: 'a'
+      }
+    }
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .reg-container {
+    width: 18rem;
+  }
+  /* .r-form-group {
+    width: 18rem;
+  } */
+  .field:not(:last-child) {
+      margin-bottom: 1.5rem;
+  }
+  .register-btn {
+    width: 100%;
+  }
 </style>
